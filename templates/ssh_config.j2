@@ -1,0 +1,8 @@
+#
+# {{ ansible_managed }}
+#
+{% for targethost in item['list_of_hosts'] %}
+Host {{ targethost['hostname_or_pattern'] }}
+     UserKnownHostsFile {{ targethost['userknownhostfile'] }}
+     StrictHostKeyChecking {{ targethost['strict_host_key_checking'] }}
+{% endfor %}
