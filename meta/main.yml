@@ -1,0 +1,34 @@
+galaxy_info:
+  role_name: 'simple_ssh_config'
+  author: 'Johannes Kastl'
+  description: 'Create a simple ~/.ssh/config for a list of users'
+  company: 'B1 Systems GmbH'
+
+  license: 'BSD-3-Clause'
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: EL
+    versions:
+    - 7
+    - 8
+  - name: Debian
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: opensuse
+    versions:
+    - all
+  - name: SLES
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+
+  galaxy_tags: []
+
+dependencies: []
