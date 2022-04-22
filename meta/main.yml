@@ -1,5 +1,6 @@
 galaxy_info:
   role_name: 'simple_ssh_config'
+  namespace: 'johanneskastl'
   author: 'Johannes Kastl'
   description: 'Create a simple ~/.ssh/config for a list of users'
   company: 'B1 Systems GmbH'
