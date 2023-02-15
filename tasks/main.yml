@@ -4,7 +4,13 @@
 - name: 'Set primary group to users on SUSE/openSUSE'
   ansible.builtin.set_fact:
     primary_group_name: 'users'
-  when: 'ansible_distribution == "SLES" or ansible_distribution == "openSUSE Leap" or ansible_distribution == "openSUSE MicroOS" or ansible_distribution == "openSUSE Tumbleweed"'
+  when:
+    - '
+      ansible_distribution == "SLES"
+      or ansible_distribution == "openSUSE Leap"
+      or ansible_distribution == "openSUSE MicroOS"
+      or ansible_distribution == "openSUSE Tumbleweed"
+      '
 
 - name: 'Create the directory ~/.ssh/'
   ansible.builtin.file:
