@@ -6,10 +6,9 @@
     primary_group_name: 'users'
   when:
     - '
-      ansible_distribution == "SLES"
-      or ansible_distribution == "openSUSE Leap"
-      or ansible_distribution == "openSUSE MicroOS"
-      or ansible_distribution == "openSUSE Tumbleweed"
+      ansible_os_family == "Suse"
+      or ansible_os_family == "openSUSE MicroOS"
+      or ansible_os_family == "openSUSE Tumbleweed"
       '
 
 - name: 'Create the directory ~/.ssh/'
