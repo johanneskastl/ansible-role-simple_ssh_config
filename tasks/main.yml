@@ -2,12 +2,12 @@
 # simple_ssh_config/tasks/main.yml
 
 - name: 'Set primary group to users on SUSE/openSUSE'
-  set_fact:
+  ansible.builtin.set_fact:
     primary_group_name: 'users'
   when: 'ansible_distribution == "SLES" or ansible_distribution == "openSUSE Leap" or ansible_distribution == "openSUSE MicroOS" or ansible_distribution == "openSUSE Tumbleweed"'
 
 - name: 'Create the directory ~/.ssh/'
-  file:
+  ansible.builtin.file:
     path: "{{ item.home }}/.ssh/"
     state: 'directory'
     owner: "{{ item.name }}"
@@ -16,7 +16,7 @@
   with_items: "{{ list_of_users }}"
 
 - name: 'Create a ~/.ssh/config'
-  template:
+  ansible.builtin.template:
     src: 'ssh_config.j2'
     dest: "{{ item.home }}/.ssh/config"
     owner: "{{ item.name }}"
