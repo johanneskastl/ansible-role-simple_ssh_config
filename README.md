@@ -56,7 +56,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: 'johanneskastl.simple_ssh_config' }
+         - role: 'johanneskastl.simple_ssh_config'
 
 License
 -------
